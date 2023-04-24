@@ -82,7 +82,7 @@ class Tabuleiro(val qtdeLinhas: Int, val qtdeColunas: Int, private val qtdeMinas
         campos.forEach { linha -> linha.forEach(callback) }
     }
     fun onEvento(callback: (TabuleiroEvento) -> Unit){
-        callbacks.add { callback }
+        callbacks.add ( callback )
     }
     fun reiniciar(){
         forEachCampo { it.reiniciar() }
