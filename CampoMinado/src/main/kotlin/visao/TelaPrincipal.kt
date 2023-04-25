@@ -21,14 +21,14 @@ class TelaPrincipal : JFrame(){
         setSize(690,438)
         setLocationRelativeTo(null)
         defaultCloseOperation = EXIT_ON_CLOSE
-        title = "Campo Minado"
+        title = "******************** CAMPO MINADO ********************** Desenvolvido por HEBERT ARAGÃO"
         isVisible = true
     }
     private fun mostrarResultado(evento: TabuleiroEvento){
         SwingUtilities.invokeLater {
             val msg = when(evento){
-                TabuleiroEvento.VITORIA -> "Você Ganhou!!!"
-                TabuleiroEvento.DERROTA -> "Você Perdeu... :P"
+                TabuleiroEvento.VITORIA -> "Você Ganhou!!! \nParabéns!!!"
+                TabuleiroEvento.DERROTA -> "Você Perdeu... :P\n Tente Novamente!"
             }
             JOptionPane.showMessageDialog(this, msg)
             tabuleiro.reiniciar()

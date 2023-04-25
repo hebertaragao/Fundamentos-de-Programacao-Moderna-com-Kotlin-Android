@@ -36,7 +36,8 @@ enum class CampoEvento{ABERTURA, MARCACAO, DESMARCACAO, EXPLOSAO, REINICIALIZACA
                  vizinhos.filter { it.fechado && it.seguro && it.vizinhacaSegura }.forEach { it.abrir() }
              }
          }
-     }fun alterarMarcacao(){
+     }
+     fun alterarMarcacao(){
          if (fechado){
              marcado = !marcado
              val evento = if (marcado) CampoEvento.MARCACAO else CampoEvento.DESMARCACAO
